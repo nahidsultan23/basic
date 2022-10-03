@@ -21,9 +21,10 @@ const Page1 = () => {
 
   useEffect(() => {
     console.log("User set");
+    localStorage.setItem("user", user);
   }, [user]);
 
-  if (user === "Nahid") {
+  if (user === "Kayes") {
     console.log("redirecting");
     history.push("https://google.com");
   }
@@ -33,6 +34,7 @@ const Page1 = () => {
       <div className={style.firstDiv}></div>
       <Page2 user={user} />
       <Link to="/page2">Page 2</Link>
+      <Link to="/page3">Page 3</Link>
     </React.Fragment>
   );
 };
